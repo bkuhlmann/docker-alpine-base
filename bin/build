@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+set -o nounset
+set -o errexit
+set -o pipefail
+IFS=$'\n\t'
+
+source "lib/utilities.sh"
+
+version="${1:-latest}"
+
+docker build --load --tag "$(tag $version)" .
+noti --title "Alchemists Docker Built: $(project)"

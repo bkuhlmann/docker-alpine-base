@@ -1,0 +1,145 @@
+:toc: macro
+:toclevels: 5
+:figure-caption!:
+
+= Docker Alpine Base
+
+[link=https://circleci.com/gh/bkuhlmann/docker-alpine-base]
+image::https://circleci.com/gh/bkuhlmann/docker-alpine-base.svg?style=svg[Circle CI Status]
+
+Provides a base link:https://www.alpinelinux.org[Alpine Linux] Docker image with a minimal set of
+tooling.
+
+toc::[]
+
+== Features
+
+- Installs CA Certificates.
+- Installs link:https://www.gnu.org/software/bash[Bash].
+- Installs link:https://curl.se[Curl].
+- Installs link:https://gnupg.org[GnuPG].
+- Installs and configures link:https://git-scm.com[Git] (including default branch).
+- Installs link:https://www.openssl.org[OpenSSL].
+- Installs link:https://www.openssh.com[OpenSSH].
+- Installs and configures link:https://www.vim.org[Vim] as default editor.
+- Sets link:https://en.wikipedia.org/wiki/Xterm[xterm] as default terminal.
+
+== Requirements
+
+. link:https://www.docker.com[Docker].
+
+== Setup
+
+To set up the project, run:
+
+[source,bash]
+----
+git clone https://github.com/bkuhlmann/docker-alpine-base.git
+cd docker-alpine-base
+git checkout 0.1.0
+----
+
+== Usage
+
+All versions of this image can be found on
+link:https://hub.docker.com/r/bkuhlmann/alpine-base[Docker Hub]. The image can be pulled as follows:
+
+[source,bash]
+----
+docker pull bkuhlmann/alpine-base:latest  # <= Pull latest version.
+docker pull bkuhlmann/alpine-base:0.1.0   # <= Pull specific version.
+----
+
+You can also build on top of this image via your `Dockerfile`:
+
+[source,dockerfile]
+----
+FROM bkuhlmann/alpine-base:latest  # <= Latest version.
+FROM bkuhlmann/alpine-base:0.1.0   # <= Specific version.
+----
+
+== Development
+
+To contribute, run:
+
+[source,bash]
+----
+git clone https://github.com/bkuhlmann/docker-alpine-base.git
+cd docker-alpine-base
+----
+
+To build, run:
+
+[source,bash]
+----
+bin/build
+----
+
+To use the console, run:
+
+[source,bash]
+----
+bin/console
+----
+
+To release a new version (i.e. `1.2.3`), run:
+
+[source,bash]
+----
+bin/release 1.2.3
+----
+
+Releasing without specifying a version will default to tagging the image as the `latest` image. Best
+practice is to release both the specific tag and update the latest tag as well. Example:
+
+[source,bash]
+----
+bin/release
+bin/release 1.2.3
+----
+
+== Tests
+
+To test, run:
+
+[source,bash]
+----
+bin/console
+bash --version
+curl --version
+git --version
+gpg --version
+openssl version
+ssh -V
+vim --version
+----
+
+== Versioning
+
+Read link:https://semver.org[Semantic Versioning] for details. Briefly, it means:
+
+* Major (X.y.z) - Incremented for any backwards incompatible public API changes.
+* Minor (x.Y.z) - Incremented for new, backwards compatible, public API enhancements/fixes.
+* Patch (x.y.Z) - Incremented for small, backwards compatible, bug fixes.
+
+== Code of Conduct
+
+Please note that this project is released with a link:CODE_OF_CONDUCT.adoc[CODE OF CONDUCT]. By
+participating in this project you agree to abide by its terms.
+
+== Contributions
+
+Read link:CONTRIBUTING.adoc[CONTRIBUTING] for details.
+
+== License
+
+Read link:LICENSE.adoc[LICENSE] for details.
+
+== History
+
+Read link:CHANGES.adoc[CHANGES] for details.
+Built with link:https://www.alchemists.io/projects/rubysmith[Rubysmith].
+
+== Credits
+
+Engineered by link:https://www.alchemists.io/team/brooke_kuhlmann[Brooke Kuhlmann].

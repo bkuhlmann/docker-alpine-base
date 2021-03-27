@@ -1,0 +1,13 @@
+#! /usr/bin/env bash
+
+set -o nounset
+set -o errexit
+set -o pipefail
+IFS=$'\n\t'
+
+source "lib/utilities.sh"
+
+version="${1:-latest}"
+
+docker build --platform linux/amd64,linux/arm64 --tag "$(tag $version)" --push .
+noti --title "Alchemists Docker Released: $(project):$version"
