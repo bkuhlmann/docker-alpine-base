@@ -1,5 +1,10 @@
 = Changes
 
+== 0.1.1 (2021-03-31)
+
+* Updated release script platform order - Brooke Kuhlmann
+* Updated to Alpine 3.13.4 - Brooke Kuhlmann
+
 == 0.1.0 (2021-03-28)
 
 * Added initial implementation.
