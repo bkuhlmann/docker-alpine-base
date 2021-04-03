@@ -5,6 +5,14 @@ LABEL maintainer="brooke@alchemists.io"
 
 ENV IMAGE_GIT_VERSION=2.31.1
 
+ARG USER_ID=1000
+ARG USER_NAME=engineer
+ARG GROUP_ID=$USER_ID
+ARG GROUP_NAME=engineers
+
+RUN addgroup -g $GROUP_ID $GROUP_NAME && \
+    adduser -u $USER_ID -G $GROUP_NAME -D -g "" -s /bin/bash $USER_NAME $GROUP_NAME
+
 WORKDIR /usr/src
 
 RUN set -o nounset && \
