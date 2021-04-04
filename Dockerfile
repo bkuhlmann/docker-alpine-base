@@ -34,6 +34,7 @@ RUN set -o nounset \
     && apk add --no-cache \
                --virtual .git-build-dependencies \
                build-base \
+               curl-dev \
                tcl \
                zlib-dev \
     && curl --remote-name https://mirrors.edge.kernel.org/pub/software/scm/git/git-$IMAGE_GIT_VERSION.tar.gz \
