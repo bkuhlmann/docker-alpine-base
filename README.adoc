@@ -14,15 +14,15 @@ toc::[]
 
 == Features
 
-- Installs CA Certificates.
-- Installs link:https://www.gnu.org/software/bash[Bash].
-- Installs link:https://curl.se[Curl].
-- Installs link:https://gnupg.org[GnuPG].
-- Installs and configures link:https://git-scm.com[Git] (including default branch).
-- Installs link:https://www.openssl.org[OpenSSL].
-- Installs link:https://www.openssh.com[OpenSSH].
-- Installs and configures link:https://www.vim.org[Vim] as default editor.
-- Sets link:https://en.wikipedia.org/wiki/Xterm[xterm] as default terminal.
+* Installs CA Certificates.
+* Installs link:https://www.gnu.org/software/bash[Bash].
+* Installs link:https://curl.se[Curl].
+* Installs link:https://gnupg.org[GnuPG].
+* Installs and configures link:https://git-scm.com[Git] (including default branch).
+* Installs link:https://www.openssl.org[OpenSSL].
+* Installs link:https://www.openssh.com[OpenSSH].
+* Installs and configures link:https://www.vim.org[Vim] as default editor.
+* Sets link:https://en.wikipedia.org/wiki/Xterm[xterm] as default terminal.
 
 == Requirements
 
@@ -36,7 +36,7 @@ To set up the project, run:
 ----
 git clone https://github.com/bkuhlmann/docker-alpine-base.git
 cd docker-alpine-base
-git checkout 0.1.1
+git checkout 0.2.0
 ----
 
 == Usage
@@ -47,7 +47,7 @@ link:https://hub.docker.com/r/bkuhlmann/alpine-base[Docker Hub]. The image can b
 [source,bash]
 ----
 docker pull bkuhlmann/alpine-base:latest  # <= Pull latest version.
-docker pull bkuhlmann/alpine-base:0.1.1   # <= Pull specific version.
+docker pull bkuhlmann/alpine-base:0.2.0   # <= Pull specific version.
 ----
 
 You can also build on top of this image via your `Dockerfile`:
@@ -55,7 +55,7 @@ You can also build on top of this image via your `Dockerfile`:
 [source,dockerfile]
 ----
 FROM bkuhlmann/alpine-base:latest  # <= Latest version.
-FROM bkuhlmann/alpine-base:0.1.1   # <= Specific version.
+FROM bkuhlmann/alpine-base:0.2.0   # <= Specific version.
 ----
 
 == Development

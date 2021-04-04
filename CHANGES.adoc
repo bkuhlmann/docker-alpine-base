@@ -1,5 +1,11 @@
 = Changes
 
+== 0.2.0 (2021-04-04)
+
+* Added curl development dependency - Brooke Kuhlmann
+* Added engineer user and group - Brooke Kuhlmann
+* Refactored Dockerfile chained commands - Brooke Kuhlmann
+
 == 0.1.1 (2021-03-31)
 
 * Updated release script platform order - Brooke Kuhlmann
