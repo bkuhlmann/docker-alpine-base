@@ -1,5 +1,10 @@
 = Changes
 
+== 0.2.1 (2021-04-14)
+
+* Updated to Alpine 3.13.5 - Brooke Kuhlmann
+* Updated to Ruby 3.0.1 - Brooke Kuhlmann
+
 == 0.2.0 (2021-04-04)
 
 * Added curl development dependency - Brooke Kuhlmann
