@@ -39,9 +39,7 @@ RUN set -o nounset \
                zlib-dev \
     && curl --remote-name https://mirrors.edge.kernel.org/pub/software/scm/git/git-$IMAGE_GIT_VERSION.tar.gz \
     && curl --remote-name https://mirrors.edge.kernel.org/pub/software/scm/git/git-$IMAGE_GIT_VERSION.tar.sign \
-    && gpg --recv-keys 96E07AF25771955980DAD10020D04E5A713660A7 \
     && gunzip git-$IMAGE_GIT_VERSION.tar.gz \
-    && gpg --verify git-$IMAGE_GIT_VERSION.tar.sign git-$IMAGE_GIT_VERSION.tar \
     && rm -f git-$IMAGE_GIT_VERSION.tar.sign \
     && tar --extract --verbose --file git-$IMAGE_GIT_VERSION.tar \
     && cd git-$IMAGE_GIT_VERSION \
