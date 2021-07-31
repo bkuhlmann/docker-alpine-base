@@ -8,7 +8,8 @@
 image::https://circleci.com/gh/bkuhlmann/docker-alpine-base.svg?style=svg[Circle CI Status]
 
 Provides a base link:https://www.alpinelinux.org[Alpine Linux] Docker image with a minimal set of
-tooling.
+tooling. Great for being used as a foundational image for building on top of like, for example, the
+link:https://www.alchemists.io/projects/docker-alpine-ruby[Docker Alpine Ruby] image.
 
 toc::[]
 
