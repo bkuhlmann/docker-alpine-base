@@ -1,4 +1,4 @@
-FROM alpine:3.14.0
+FROM alpine:3.14.1
 
 LABEL description="Alchemists Alpine Base"
 LABEL maintainer="brooke@alchemists.io"
