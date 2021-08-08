@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1.3-labs
+
 FROM alpine:3.14.1
 
 LABEL description="Alchemists Alpine Base"
@@ -10,46 +12,50 @@ ARG USER_NAME=engineer
 ARG GROUP_ID=$USER_ID
 ARG GROUP_NAME=engineers
 
-RUN addgroup -g $GROUP_ID $GROUP_NAME \
-    && adduser -u $USER_ID -G $GROUP_NAME -D -g "" -s /bin/bash $USER_NAME $GROUP_NAME
+RUN <<STEPS
+  addgroup -g $GROUP_ID $GROUP_NAME
+  adduser -u $USER_ID -G $GROUP_NAME -D -g "" -s /bin/bash $USER_NAME $GROUP_NAME
+STEPS
 
 WORKDIR /usr/src
 
-RUN set -o nounset \
-    && set -o errexit \
-    && set -o pipefail \
-    && IFS=$'\n\t' \
-    && apk update \
-    && apk upgrade --available \
-    && apk add --no-cache \
-               ca-certificates \
-               bash \
-               curl \
-               gnupg \
-               openssl \
-               openssh \
-               vim \
-    && apk add --no-cache \
-               --update bash \
-    && apk add --no-cache \
-               --virtual .git-build-dependencies \
-               build-base \
-               curl-dev \
-               tcl \
-               zlib-dev \
-    && curl --remote-name https://mirrors.edge.kernel.org/pub/software/scm/git/git-$IMAGE_GIT_VERSION.tar.gz \
-    && curl --remote-name https://mirrors.edge.kernel.org/pub/software/scm/git/git-$IMAGE_GIT_VERSION.tar.sign \
-    && gunzip git-$IMAGE_GIT_VERSION.tar.gz \
-    && rm -f git-$IMAGE_GIT_VERSION.tar.sign \
-    && tar --extract --verbose --file git-$IMAGE_GIT_VERSION.tar \
-    && cd git-$IMAGE_GIT_VERSION \
-    && ./configure \
-    && make prefix=/usr all \
-    && make prefix=/usr install \
-    && cd .. \
-    && rm -rf git-$IMAGE_GIT_VERSION \
-    && rm -f git-$IMAGE_GIT_VERSION.tar \
-    && apk del .git-build-dependencies
+RUN <<STEPS
+  set -o nounset
+  set -o errexit
+  set -o pipefail
+  IFS=$'\n\t'
+  apk update
+  apk upgrade --available
+  apk add --no-cache \
+          ca-certificates \
+          bash \
+          curl \
+          gnupg \
+          openssl \
+          openssh \
+          vim
+  apk add --no-cache \
+          --update bash
+  apk add --no-cache \
+          --virtual .git-build-dependencies \
+          build-base \
+          curl-dev \
+          tcl \
+          zlib-dev
+  curl --remote-name https://mirrors.edge.kernel.org/pub/software/scm/git/git-$IMAGE_GIT_VERSION.tar.gz
+  curl --remote-name https://mirrors.edge.kernel.org/pub/software/scm/git/git-$IMAGE_GIT_VERSION.tar.sign
+  gunzip git-$IMAGE_GIT_VERSION.tar.gz
+  rm -f git-$IMAGE_GIT_VERSION.tar.sign
+  tar --extract --verbose --file git-$IMAGE_GIT_VERSION.tar
+  cd git-$IMAGE_GIT_VERSION
+  ./configure
+  make prefix=/usr all
+  make prefix=/usr install
+  cd ..
+  rm -rf git-$IMAGE_GIT_VERSION
+  rm -f git-$IMAGE_GIT_VERSION.tar
+  apk del .git-build-dependencies
+STEPS
 
 RUN git config --global init.defaultBranch main
 
