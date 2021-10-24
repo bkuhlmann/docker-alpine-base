@@ -57,7 +57,11 @@ RUN <<STEPS
   apk del .git-build-dependencies
 STEPS
 
-RUN git config --global init.defaultBranch main
+RUN <<STEPS
+  git config --global init.defaultBranch main
+  git config --global user.name "Test User"
+  git config --global user.email "test@example.com"
+STEPS
 
 COPY .config/docker-alpine-base/shell_loader.sh /etc/profile.d/
 
