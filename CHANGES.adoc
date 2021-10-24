@@ -1,5 +1,10 @@
 = Changes
 
+== 0.5.0 (2021-10-24)
+
+- Added Git default user - Brooke Kuhlmann
+- Removed notes from pull request template - Brooke Kuhlmann
+
 == 0.4.4 (2021-08-27)
 
 - Updated to Alpine Linux 3.14.2 - Brooke Kuhlmann
