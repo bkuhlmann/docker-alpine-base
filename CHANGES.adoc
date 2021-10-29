@@ -1,5 +1,9 @@
 = Changes
 
+== 0.5.1 (2021-10-29)
+
+- Updated to Git 2.33.1 - Brooke Kuhlmann
+
 == 0.5.0 (2021-10-24)
 
 - Added Git default user - Brooke Kuhlmann
