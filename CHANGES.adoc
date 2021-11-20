@@ -1,5 +1,9 @@
 = Changes
 
+== 0.6.0 (2021-11-20)
+
+- Updated to Git 2.34.0 - Brooke Kuhlmann
+
 == 0.5.2 (2021-11-12)
 
 * Added README community link - Brooke Kuhlmann
