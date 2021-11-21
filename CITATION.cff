@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: Please use the following metadata when citing this project in your work.
+title: Docker Alpine Base
+abstract: Provides a base Alpine Linux Docker image with a minimal set of tooling.
+version: 0.6.0
+license: Hippocratic-3.0
+date-released: 2021-11-20
+authors:
+  - family-names: Kuhlmann
+    given-names: Brooke
+    affiliation: Alchemists
+    orcid: https://orcid.org/0000-0002-5810-6268
+keywords:
+ - docker
+ - development
+repository-code: https://www.alchemists.io/projects/docker-alpine-base
+repository-artifact: https://www.alchemists.io/projects/docker-alpine-base
