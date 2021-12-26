@@ -1,5 +1,10 @@
 = Changes
 
+== 1.0.0 (2021-12-26)
+
+- Added Dockerfile tests - Brooke Kuhlmann
+- Updated to Ruby 3.1.0 - Brooke Kuhlmann
+
 == 0.7.1 (2021-11-29)
 
 * Updated to Git 2.34.1 - Brooke Kuhlmann
