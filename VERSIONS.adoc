@@ -1,17 +1,22 @@
 = Versions
 
+== 1.1.0 (2022-01-25)
+
+* Added Ruby version to Gemfile - Brooke Kuhlmann
+* Updated to Git 2.35.0 - Brooke Kuhlmann
+
 == 1.0.1 (2022-01-01)
 
-- Updated README policy section links - Brooke Kuhlmann
-- Updated changes as versions documentation - Brooke Kuhlmann
-- Updated to Git Lint 3.0.0 - Brooke Kuhlmann
-- Updated to Milestoner 13.0.0 - Brooke Kuhlmann
-- Removed code of conduct and contributing files - Brooke Kuhlmann
+* Updated README policy section links - Brooke Kuhlmann
+* Updated changes as versions documentation - Brooke Kuhlmann
+* Updated to Git Lint 3.0.0 - Brooke Kuhlmann
+* Updated to Milestoner 13.0.0 - Brooke Kuhlmann
+* Removed code of conduct and contributing files - Brooke Kuhlmann
 
 == 1.0.0 (2021-12-26)
 
-- Added Dockerfile tests - Brooke Kuhlmann
-- Updated to Ruby 3.1.0 - Brooke Kuhlmann
+* Added Dockerfile tests - Brooke Kuhlmann
+* Updated to Ruby 3.1.0 - Brooke Kuhlmann
 
 == 0.7.1 (2021-11-29)
 
@@ -30,7 +35,7 @@
 
 == 0.6.0 (2021-11-20)
 
-- Updated to Git 2.34.0 - Brooke Kuhlmann
+* Updated to Git 2.34.0 - Brooke Kuhlmann
 
 == 0.5.2 (2021-11-12)
 
