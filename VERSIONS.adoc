@@ -1,5 +1,9 @@
 = Versions
 
+== 1.5.0 (2022-11-22)
+
+* Updated to Alpine Linux 3.17.0 - Brooke Kuhlmann
+
 == 1.4.2 (2022-11-12)
 
 * Updated to Alpine Linux 3.16.3 - Brooke Kuhlmann
