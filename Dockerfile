@@ -56,7 +56,7 @@ RUN <<STEPS
   cd git-$IMAGE_GIT_VERSION
   ./configure
   make prefix=/usr all
-  make prefix=/usr install
+  make INSTALL_STRIP=-s prefix=/usr install
 
   # Clean
   cd ..
