@@ -1,5 +1,11 @@
 = Versions
 
+== 1.5.1 (2022-12-12)
+
+* Fixed shell loader to not exit if profile is not found - Brooke Kuhlmann
+* Updated to Git 2.38.2 - Brooke Kuhlmann
+* Updated to Ruby 3.1.3 - Brooke Kuhlmann
+
 == 1.5.0 (2022-11-22)
 
 * Updated to Alpine Linux 3.17.0 - Brooke Kuhlmann
