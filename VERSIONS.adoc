@@ -1,5 +1,10 @@
 = Versions
 
+== 1.6.0 (2022-12-13)
+
+* Updated Git build to strip binary debug information - Brooke Kuhlmann
+* Updated to Git 2.39.0 - Brooke Kuhlmann
+
 == 1.5.1 (2022-12-12)
 
 * Fixed shell loader to not exit if profile is not found - Brooke Kuhlmann
