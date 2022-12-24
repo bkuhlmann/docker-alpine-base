@@ -76,7 +76,5 @@ RUN <<STEPS
   git config --global user.email "test@example.com"
 STEPS
 
-COPY .config/docker-alpine-base/shell_loader.sh /etc/profile.d/
-
 ENV EDITOR=vim
 ENV TERM=xterm
