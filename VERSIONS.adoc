@@ -1,5 +1,10 @@
 = Versions
 
+== 2.0.2 (2023-01-17)
+
+* Updated to Git 2.39.1 - Brooke Kuhlmann
+* Updated to Milestoner 15.2.0 - Brooke Kuhlmann
+
 == 2.0.1 (2023-01-09)
 
 * Updated to Alpine Linux 3.17.1 - Brooke Kuhlmann
