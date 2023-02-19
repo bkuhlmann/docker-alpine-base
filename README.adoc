@@ -6,7 +6,7 @@
 
 Provides a base link:https://www.alpinelinux.org[Alpine Linux] Docker image with a minimal set of
 tooling. Great for being used as a foundational image for building on top of, for example, the
-link:https://www.alchemists.io/projects/docker-alpine-ruby[Docker Alpine Ruby] image.
+link:https://alchemists.io/projects/docker-alpine-ruby[Docker Alpine Ruby] image.
 
 toc::[]
 
@@ -111,19 +111,19 @@ ssh -V
 vim --version
 ----
 
-== link:https://www.alchemists.io/policies/license[License]
+== link:https://alchemists.io/policies/license[License]
 
-== link:https://www.alchemists.io/policies/security[Security]
+== link:https://alchemists.io/policies/security[Security]
 
-== link:https://www.alchemists.io/policies/code_of_conduct[Code of Conduct]
+== link:https://alchemists.io/policies/code_of_conduct[Code of Conduct]
 
-== link:https://www.alchemists.io/policies/contributions[Contributions]
+== link:https://alchemists.io/policies/contributions[Contributions]
 
-== link:https://www.alchemists.io/projects/docker-alpine-base/versions[Versions]
+== link:https://alchemists.io/projects/docker-alpine-base/versions[Versions]
 
-== link:https://www.alchemists.io/community[Community]
+== link:https://alchemists.io/community[Community]
 
 == Credits
 
-* Built with link:https://www.alchemists.io/projects/rubysmith[Rubysmith].
-* Engineered by link:https://www.alchemists.io/team/brooke_kuhlmann[Brooke Kuhlmann].
+* Built with link:https://alchemists.io/projects/rubysmith[Rubysmith].
+* Engineered by link:https://alchemists.io/team/brooke_kuhlmann[Brooke Kuhlmann].

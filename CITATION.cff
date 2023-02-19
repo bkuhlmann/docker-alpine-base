@@ -13,5 +13,5 @@ authors:
 keywords:
  - docker
  - development
-repository-code: https://www.alchemists.io/projects/docker-alpine-base
-repository-artifact: https://www.alchemists.io/projects/docker-alpine-base
+repository-code: https://alchemists.io/projects/docker-alpine-base
+repository-artifact: https://alchemists.io/projects/docker-alpine-base
