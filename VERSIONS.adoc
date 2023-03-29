@@ -1,5 +1,9 @@
 = Versions
 
+== 2.1.1 (2023-03-29)
+
+Updated to Alpine Linux 3.17.3 - Brooke Kuhlmann
+
 == 2.1.0 (2023-03-13)
 
 * Updated site URLs to use bare domain - Brooke Kuhlmann
