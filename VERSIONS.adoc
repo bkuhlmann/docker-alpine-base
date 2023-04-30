@@ -1,5 +1,12 @@
 = Versions
 
+== 2.1.2 (2023-04-30)
+
+* Updated to Caliber 0.30.0 - Brooke Kuhlmann
+* Updated to Git 2.40.1 - Brooke Kuhlmann
+* Updated to Milestoner 15.3.0 - Brooke Kuhlmann
+* Updated to Ruby 3.2.2 - Brooke Kuhlmann
+
 == 2.1.1 (2023-03-29)
 
 Updated to Alpine Linux 3.17.3 - Brooke Kuhlmann
