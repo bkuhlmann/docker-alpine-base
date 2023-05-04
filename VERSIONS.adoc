@@ -1,5 +1,9 @@
 = Versions
 
+== 2.2.0 (2023-05-10)
+
+* Updated to Alpine Linux 3.18.0 - Brooke Kuhlmann
+
 == 2.1.2 (2023-04-30)
 
 * Updated to Caliber 0.30.0 - Brooke Kuhlmann
