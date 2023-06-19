@@ -1,5 +1,14 @@
 = Versions
 
+== 2.3.1 (2023-06-19)
+
+* Updated deploy script to use explicit buildx command - Brooke Kuhlmann
+* Updated to Alpine Linux 3.18.2 - Brooke Kuhlmann
+* Updated to Caliber 0.35.0 - Brooke Kuhlmann
+* Updated to Git Lint 6.0.0 - Brooke Kuhlmann
+* Updated to Milestoner 16.0.0 - Brooke Kuhlmann
+* Updated to Refinements 11.0.0 - Brooke Kuhlmann
+
 == 2.3.0 (2023-06-02)
 
 Updated to Git 2.41.0 - Brooke Kuhlmann
