@@ -1,5 +1,9 @@
 = Versions
 
+== 2.4.1 (2023-09-28)
+
+* Updated to Alpine Linux 3.18.4 - Brooke Kuhlmann
+
 == 2.4.0 (2023-08-21)
 
 * Fixed build script to use buildx - Brooke Kuhlmann
