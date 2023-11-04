@@ -1,5 +1,12 @@
 = Versions
 
+== 2.4.2 (2023-11-04)
+
+* Updated GitHub issue template with simplified sections - Brooke Kuhlmann
+* Updated to Caliber 0.42.0 - Brooke Kuhlmann
+* Updated to Git 2.42.1 - Brooke Kuhlmann
+* Refactored Gemfile to use ruby file syntax - Brooke Kuhlmann
+
 == 2.4.1 (2023-09-28)
 
 * Updated to Alpine Linux 3.18.4 - Brooke Kuhlmann
