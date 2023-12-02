@@ -1,5 +1,10 @@
 = Versions
 
+== 2.5.1 (2023-12-01)
+
+* Added Rakefile quality task - Brooke Kuhlmann
+* Updated to Alpine Linux 3.18.5 - Brooke Kuhlmann
+
 == 2.5.0 (2023-11-22)
 
 * Updated to Git 2.43.0 - Brooke Kuhlmann
