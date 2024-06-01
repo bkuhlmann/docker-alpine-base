@@ -5,7 +5,7 @@ FROM alpine:3.20.0
 LABEL description="Alchemists Alpine Base"
 LABEL maintainer="brooke@alchemists.io"
 
-ENV IMAGE_GIT_VERSION=2.45.1
+ENV IMAGE_GIT_VERSION=2.45.2
 
 ARG USER_ID=1000
 ARG USER_NAME=engineer
