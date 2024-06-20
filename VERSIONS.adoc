@@ -1,5 +1,12 @@
 = Versions
 
+== 3.7.0 (2024-06-20)
+
+* 🔼 Updated deploy script to automatically calculate version - Brooke Kuhlmann
+* 🔼 Updated to Alpine Linux 3.20.1 - Brooke Kuhlmann
+* 🔼 Updated to Caliber 0.58.0 - Brooke Kuhlmann
+* 🔼 Updated to Ruby 3.3.3 - Brooke Kuhlmann
+
 == 3.6.0 (2024-06-01)
 
 * 🔼 Updated to Git 2.45.2 - Brooke Kuhlmann
