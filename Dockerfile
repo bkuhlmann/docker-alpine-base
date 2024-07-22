@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1.3-labs
 
-FROM alpine:3.20.1
+FROM alpine:3.20.2
 
 LABEL description="Alchemists Alpine Base"
 LABEL maintainer="brooke@alchemists.io"
