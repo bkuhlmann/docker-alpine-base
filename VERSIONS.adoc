@@ -1,5 +1,12 @@
 = Versions
 
+== 3.8.0 (2024-07-22)
+
+* 🔼 Updated to Alpine Linux 3.20.2 - Brooke Kuhlmann
+* 🔼 Updated to Git Lint 8.0.0 - Brooke Kuhlmann
+* 🔼 Updated to Milestoner 18.0.0 - Brooke Kuhlmann
+* 🔼 Updated to Ruby 3.3.4 - Brooke Kuhlmann
+
 == 3.7.0 (2024-06-20)
 
 * 🔼 Updated deploy script to automatically calculate version - Brooke Kuhlmann
