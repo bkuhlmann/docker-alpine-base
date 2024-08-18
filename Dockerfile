@@ -3,7 +3,7 @@
 FROM alpine:3.20.2
 
 LABEL description="Alchemists Alpine Base"
-LABEL maintainer="brooke@alchemists.io"
+LABEL maintainer="Brooke Kuhlmann <brooke@alchemists.io>"
 
 ENV IMAGE_GIT_VERSION=2.46.0
 
