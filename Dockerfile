@@ -5,8 +5,7 @@ FROM alpine:3.20.2
 LABEL description="Alchemists Alpine Base"
 LABEL maintainer="Brooke Kuhlmann <brooke@alchemists.io>"
 
-ENV IMAGE_GIT_VERSION=2.46.0
-
+ARG GIT_VERSION=2.46.0
 ARG USER_ID=1000
 ARG USER_NAME=engineer
 ARG GROUP_ID=$USER_ID
@@ -46,22 +45,22 @@ RUN <<STEPS
           zlib-dev
 
   # Download
-  curl --remote-name https://mirrors.edge.kernel.org/pub/software/scm/git/git-$IMAGE_GIT_VERSION.tar.gz
-  curl --remote-name https://mirrors.edge.kernel.org/pub/software/scm/git/git-$IMAGE_GIT_VERSION.tar.sign
-  gunzip git-$IMAGE_GIT_VERSION.tar.gz
-  rm -f git-$IMAGE_GIT_VERSION.tar.sign
-  tar --extract --verbose --file git-$IMAGE_GIT_VERSION.tar
+  curl --remote-name https://mirrors.edge.kernel.org/pub/software/scm/git/git-$GIT_VERSION.tar.gz
+  curl --remote-name https://mirrors.edge.kernel.org/pub/software/scm/git/git-$GIT_VERSION.tar.sign
+  gunzip git-$GIT_VERSION.tar.gz
+  rm -f git-$GIT_VERSION.tar.sign
+  tar --extract --verbose --file git-$GIT_VERSION.tar
 
   # Build
-  cd git-$IMAGE_GIT_VERSION
+  cd git-$GIT_VERSION
   ./configure
   make prefix=/usr all
   make INSTALL_STRIP=-s prefix=/usr install
 
   # Clean
   cd ..
-  rm -rf git-$IMAGE_GIT_VERSION
-  rm -f git-$IMAGE_GIT_VERSION.tar
+  rm -rf git-$GIT_VERSION
+  rm -f git-$GIT_VERSION.tar
   apk del .git-build-dependencies
 
   # Test
