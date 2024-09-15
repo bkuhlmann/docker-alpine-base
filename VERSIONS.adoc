@@ -1,5 +1,9 @@
 = Versions
 
+== 3.11.1 (2024-09-15)
+
+* 🔼 Updated to Git 2.46.1 - Brooke Kuhlmann
+
 == 3.11.0 (2024-09-07)
 
 * 🔼 Updated to Alpine Linux 3.20.3 - Brooke Kuhlmann
