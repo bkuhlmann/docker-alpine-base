@@ -6,17 +6,6 @@ LABEL description="Alchemists Alpine Base"
 LABEL maintainer="Brooke Kuhlmann <brooke@alchemists.io>"
 
 ARG GIT_VERSION=2.47.0
-ARG USER_ID=1000
-ARG USER_NAME=engineer
-ARG GROUP_ID=$USER_ID
-ARG GROUP_NAME=engineers
-
-RUN <<STEPS
-  addgroup -g $GROUP_ID $GROUP_NAME
-  adduser -u $USER_ID -G $GROUP_NAME -D -g "" -s /bin/bash $USER_NAME $GROUP_NAME
-STEPS
-
-WORKDIR /usr/src
 
 RUN <<STEPS
   # Defaults
@@ -74,6 +63,9 @@ RUN <<STEPS
   git config --global user.name "Test User"
   git config --global user.email "test@example.com"
 STEPS
+
+RUN addgroup -g 1000 app && \
+    adduser -u 1000 -G app -D -g "" -s /bin/bash app app
 
 ENV EDITOR=vim
 ENV TERM=xterm
