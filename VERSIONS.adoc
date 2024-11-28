@@ -1,5 +1,9 @@
 = Versions
 
+== 3.13.1 (2024-11-28)
+
+* 🔼 Updated to Git 2.47.1 - Brooke Kuhlmann
+
 == 3.13.0 (2024-11-19)
 
 * 🟢 Added version release notes - Brooke Kuhlmann
