@@ -59,9 +59,9 @@ RUN <<STEPS
 STEPS
 
 RUN <<STEPS
-  git config --global init.defaultBranch main
-  git config --global user.name "Test User"
-  git config --global user.email "test@example.com"
+  git config set --global init.defaultBranch main
+  git config set --global user.name "Test User"
+  git config set --global user.email "test@example.com"
 STEPS
 
 RUN addgroup -g 1000 app && \
