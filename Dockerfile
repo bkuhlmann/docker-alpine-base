@@ -5,7 +5,7 @@ FROM alpine:3.21.3
 LABEL description="Alchemists Alpine Base"
 LABEL maintainer="Brooke Kuhlmann <brooke@alchemists.io>"
 
-ARG GIT_VERSION=2.48.1
+ARG GIT_VERSION=2.49.0
 
 RUN <<STEPS
   # Defaults
