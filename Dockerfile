@@ -7,13 +7,11 @@ LABEL maintainer="Brooke Kuhlmann <brooke@alchemists.io>"
 
 ARG GIT_VERSION=2.52.0
 
-RUN <<STEPS
-  # Defaults
-  set -o nounset
-  set -o errexit
-  set -o pipefail
-  IFS=$'\n\t'
+RUN apk add --no-cache bash
 
+SHELL ["/bin/bash", "-o", "errexit", "-o", "nounset", "-o", "pipefail", "-c"]
+
+RUN <<STEPS
   # Setup
   apk update
   apk upgrade --available
