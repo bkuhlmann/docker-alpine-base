@@ -39,13 +39,14 @@ RUN <<STEPS
   tar --extract --verbose --file git-$GIT_VERSION.tar
 
   # Build
-  cd git-$GIT_VERSION
-  ./configure
-  make prefix=/usr all
-  make INSTALL_STRIP=-s prefix=/usr install
+  (
+    cd git-$GIT_VERSION || exit
+    ./configure
+    make prefix=/usr all
+    make INSTALL_STRIP=-s prefix=/usr install
+  )
 
   # Clean
-  cd ..
   rm -rf git-$GIT_VERSION
   rm -f git-$GIT_VERSION.tar
   apk del .git-build-dependencies
