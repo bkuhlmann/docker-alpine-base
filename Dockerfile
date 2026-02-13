@@ -5,7 +5,7 @@ FROM alpine:3.23.3
 LABEL description="Alchemists Alpine Base"
 LABEL maintainer="Brooke Kuhlmann <brooke@alchemists.io>"
 
-ARG GIT_VERSION=2.52.0
+ARG GIT_VERSION=2.53.0
 
 RUN apk add --no-cache bash
 
