@@ -12,7 +12,7 @@ RUN apk add --no-cache bash
 SHELL ["/bin/bash", "-o", "errexit", "-o", "nounset", "-o", "pipefail", "-c"]
 
 RUN <<STEPS
-  # Setup
+  # Install
   apk update
   apk upgrade --available
   apk add --no-cache \
@@ -61,10 +61,10 @@ RUN <<STEPS
   git config set --global init.defaultBranch main
   git config set --global user.name "Test User"
   git config set --global user.email "test@example.com"
-STEPS
 
-RUN addgroup -g 1000 app && \
-    adduser -u 1000 -G app -D -g "" -s /bin/bash app app
+  addgroup -g 1000 app
+  adduser -u 1000 -G app -D -g "" -s /bin/bash app app
+STEPS
 
 ENV EDITOR=vim
 ENV TERM=xterm
