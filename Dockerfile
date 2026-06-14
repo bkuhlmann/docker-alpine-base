@@ -16,12 +16,12 @@ RUN <<STEPS
   apk update
   apk upgrade --available
   apk add --no-cache \
-          ca-certificates \
           bash \
+          ca-certificates \
           curl \
           gnupg \
-          openssl \
           openssh \
+          openssl \
           vim
   apk add --no-cache --update bash
   apk add --no-cache \
@@ -29,16 +29,20 @@ RUN <<STEPS
           build-base \
           curl-dev \
           tcl \
+          xz \
           zlib-dev
 
   # Download
-  curl --remote-name https://mirrors.edge.kernel.org/pub/software/scm/git/git-$GIT_VERSION.tar.gz
-  curl --remote-name https://mirrors.edge.kernel.org/pub/software/scm/git/git-$GIT_VERSION.tar.sign
-  gunzip git-$GIT_VERSION.tar.gz
-  rm -f git-$GIT_VERSION.tar.sign
-  tar --extract --verbose --file git-$GIT_VERSION.tar
+  curl --remote-name https://www.kernel.org/pub/software/scm/git/git-$GIT_VERSION.tar.xz
+  curl --remote-name https://www.kernel.org/pub/software/scm/git/git-$GIT_VERSION.tar.sign
+
+  # Verify (uses core maintainer Junio C Hamano's signing key)
+  xz --decompress git-$GIT_VERSION.tar.xz
+  gpg --keyserver keyserver.ubuntu.com --recv-keys 20D04E5A713660A7
+  gpg --verify git-$GIT_VERSION.tar.sign git-$GIT_VERSION.tar
 
   # Build
+  tar --extract --verbose --file git-$GIT_VERSION.tar
   (
     cd git-$GIT_VERSION || exit
     ./configure
@@ -49,6 +53,7 @@ RUN <<STEPS
   # Clean
   rm -rf git-$GIT_VERSION
   rm -f git-$GIT_VERSION.tar
+  rm -f git-$GIT_VERSION.tar.sign
   apk del .git-build-dependencies
 
   # Test
