@@ -6,7 +6,7 @@ LABEL description="Alchemists Alpine Base"
 LABEL maintainer="Brooke Kuhlmann <brooke@alchemists.io>"
 
 ARG GIT_VERSION=2.55.0
-ARG RUSTUP_VERISON=1.29.0
+ARG RUSTUP_VERISON=1.29.1
 ARG RUST_TOOLCHAIN_VERSION=1.91.1
 
 RUN apk add --no-cache bash
