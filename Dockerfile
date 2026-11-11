@@ -5,7 +5,7 @@ FROM alpine:3.24.4
 LABEL description="Alchemists Alpine Base"
 LABEL maintainer="Brooke Kuhlmann <brooke@alchemists.io>"
 
-ARG GIT_VERSION=2.56.0
+ARG GIT_VERSION=2.56.1
 ARG RUSTUP_VERISON=1.29.3
 ARG RUST_TOOLCHAIN_VERSION=1.91.1
 
@@ -73,13 +73,31 @@ RUN <<STEPS
   fi;
 
   # Git (download)
-  curl --remote-name https://www.kernel.org/pub/software/scm/git/git-$GIT_VERSION.tar.xz
-  curl --remote-name https://www.kernel.org/pub/software/scm/git/git-$GIT_VERSION.tar.sign
+  curl --retry 5 \
+       --retry-all-errors \
+       --retry-max-time 60 \
+       --fail \
+       --remove-on-error \
+       --remote-name https://www.kernel.org/pub/software/scm/git/git-$GIT_VERSION.tar.xz
+  curl --retry 5 \
+       --retry-all-errors \
+       --retry-max-time 60 \
+       --fail \
+       --remove-on-error \
+       --remote-name https://www.kernel.org/pub/software/scm/git/git-$GIT_VERSION.tar.sign
 
   # Git (verify, uses core maintainer Junio C Hamano's signing key)
   xz --decompress git-$GIT_VERSION.tar.xz
-  gpg --keyserver keyserver.ubuntu.com --recv-keys 20D04E5A713660A7
-  gpg --verify git-$GIT_VERSION.tar.sign git-$GIT_VERSION.tar
+  export GNUPGHOME
+  GNUPGHOME="$(mktemp -d)"
+  gpg --batch \
+      --no-tty \
+      --keyserver hkps://keyserver.ubuntu.com \
+      --recv-keys 96E07AF25771955980DAD10020D04E5A713660A7
+  gpg --batch --verify git-$GIT_VERSION.tar.sign git-$GIT_VERSION.tar
+  gpgconf --kill all || true
+  rm -rf "$GNUPGHOME"
+  unset GNUPGHOME
 
   # Git (build)
   tar --extract --verbose --file git-$GIT_VERSION.tar
